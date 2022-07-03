@@ -16,7 +16,7 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Adding Webpack plugin to generate HTML and inject our bundles
+      // Webpack plugin to generate HTML and inject our bundles
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'JATE'
@@ -27,7 +27,7 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
-      // manifest.json
+      // manifest.json file
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
